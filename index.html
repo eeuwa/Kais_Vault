@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Kai's Vault</title>
+  <link rel="icon" href="img/framedlogo.png" type="image/png">
+  <style>
+    body {
+      background-image: url("img/Background_0.png");
+      background-size: cover;
+      background-repeat: repeat-y;
+      background-attachment: fixed;
+      font-family: Verdana, Arial, sans-serif;
+      color: #0000CC;
+    }
+    .container {
+      width: 800px;
+      margin: 0 auto;
+      border: 0px solid #0000FF;
+    }
+    .navbar {
+      background-color: #022d00;
+      border: 4px solid #0eff00;
+      padding: 10px;
+      text-align: center;
+    }
+    .navbar a {
+      margin: 1 10px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .banner {
+      padding: 0px;
+      text-align: center;
+      font-size: 24px;
+      font-weight: bold;
+      color: #000066;
+    }
+    .emptyspace {
+      padding: 15px;
+      border: 0px solid #000000;
+    }
+    .content {
+      padding: 15px;
+      background-color: #022d00;
+      border: 4px solid #0eff00;
+    }
+    .footer {
+      background-color: #022d00;
+      border: 4px solid #0eff00;
+      text-align: center;
+      padding: 10px;
+      font-size: 12px;
+    }
+    .music-button {
+      background-color: #0eff00;
+      color: black;
+      padding: 10px 20px;
+      border: none;
+      font-weight: bold;
+      cursor: pointer;
+      margin: 15px auto;
+      display: block;
+    }
+  </style>
+</head>
+<body>
+  <audio id="bgm">
+    <source src="sounds/main_theme.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+
+  <div class="container">
+    <div class="banner">
+      <img src="img/Logo.gif" alt="Kai's Vault" width="800" height="400" style="display: block;">
+    </div>
+
+    <div class="navbar">
+      <a href="index.html"><img src="img/home.png" width="200" height="50" alt="Home"></a>
+      <a href="about.html"><img src="img/about.png" width="200" height="50" alt="About Me"></a>
+      <a href="gate.html"><img src="img/gate.png" width="200" height="50" alt="Gate"></a>
+      <a href="archive.html"><img src="img/archive-backups.png" width="600" height="50" alt="Archive/backups"></a>
+    </div>
+
+    <button class="music-button" id="musicButton" onclick="toggleMusic()">Play Theme</button>
+
+    <div class="emptyspace">
+      <marquee behavior="scroll" direction="left" scrollamount="50" scrolldelay="9">
+        <font color="lime">
+          <img src="img/doobie_mario.gif" width="100" height="100">
+          <img src="img/doobie_mario.gif" width="100" height="100">
+          <img src="img/doobie_mario.gif" width="100" height="100">
+          <img src="img/doobie_mario.gif" width="100" height="100">
+          <img src="img/doobie_mario.gif" width="100" height="100">
+          <img src="img/doobie_mario.gif" width="100" height="100">
+        </font>
+      </marquee>
+    </div>
+
+    <div class="content">
+      <h2><p style="color: lime;">Homepage</p></h2>
+      <p style="color: #00d700;">
+        Hello there dear traveller! Looks like you stumbled upon my great archive.. your reward is a peek at everything I have in store. I have lots of fun projects if you're into coding and electronics. However, if you're more of a gamer guy: I have a MASSIVE collection of games!
+      </p>
+      <img src="https://media.tenor.com/i_pgHu8ONPoAAAAM/dancing-banana-gif.gif" width="300" height="200" />
+    </div>
+
+    <div class="emptyspace"><h3></h3></div>
+
+    <div class="footer">
+      KaisVault.com | Hosted on Neocities.org | Made using Notepad++ | ver 1.0 pre-release
+    </div>
+  </div>
+
+  <script>
+    const bgm = document.getElementById('bgm');
+    const button = document.getElementById('musicButton');
+
+    function toggleMusic() {
+     if (bgm.paused) {
+      bgm.volume = 0.3;
+      bgm.play();
+      button.textContent = "Pause Theme";
+    } else {
+      bgm.pause();
+      button.textContent = "Play Theme";
+    }
+  }
+</script>
+</body>
+</html>
